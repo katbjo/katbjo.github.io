@@ -86,7 +86,8 @@ dl.pubs .doi{display:inline-block;margin-left:2px;font-size:15px;color:var(--ink
 .hero-in{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1fr) 240px;gap:56px;align-items:center;width:100%;max-width:1040px}
 .hero-text{container-type:inline-size;min-width:0}
 .hero h1{margin-bottom:22px}
-.hero .sub{font-size:clamp(18px,1.55vw,21px);max-width:30em;margin-bottom:32px;text-wrap:pretty}
+.hero .sub{font-size:clamp(18px,1.55vw,21px);max-width:30em;margin-bottom:16px;text-wrap:pretty}
+.hero .sub2{font-size:16px;line-height:1.55;color:var(--ink-2);max-width:38em;margin-bottom:30px;text-wrap:pretty}
 .hero .actions{margin:0 0 28px}
 .hero .links{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:15px}
 .hero .links a{text-decoration:none;color:var(--ink);display:inline-flex;align-items:center;gap:5px;border-bottom:1px solid var(--rule);padding-bottom:2px}
