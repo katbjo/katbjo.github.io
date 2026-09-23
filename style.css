@@ -34,7 +34,7 @@ img{display:block;max-width:100%;height:auto}
 .top{display:flex;justify-content:space-between;align-items:baseline;gap:24px;height:60px;padding-top:22px;border-bottom:1px solid var(--rule)}
 .top .mark{font-size:14px;font-weight:600;letter-spacing:.01em;text-decoration:none}
 .nav{display:flex;gap:28px;font-size:14px}
-.nav a{text-decoration:none;padding-bottom:6px;border-bottom:1px solid transparent}
+.nav a{text-decoration:none;padding-bottom:6px;border-bottom:1px solid transparent;transition:border-color .15s var(--ease)}
 .nav a:hover{border-bottom-color:var(--ink)}
 .nav a[aria-current]{border-bottom:2px solid var(--ink)}
 .nav .dl{display:inline-flex;align-items:center;gap:6px}
@@ -42,23 +42,14 @@ img{display:block;max-width:100%;height:auto}
 
 section{padding:56px 0 36px;border-top:1px solid var(--rule)}
 section:first-of-type{border-top:0;padding-top:64px}
-.now{font-size:16px;color:var(--ink-2);max-width:40em}
 h1{font-size:clamp(40px,5.2vw,64px);line-height:1;margin:0 0 20px}
 .hero h1{font-family:"Montserrat","Familjen Grotesk",system-ui,sans-serif;font-size:clamp(26px,10.4cqw,64px);line-height:1.05;white-space:nowrap;font-weight:200;letter-spacing:-0.01em}
 .hero h1 b{font-weight:700}
 .sub{font-size:clamp(18px,1.6vw,21px);line-height:1.4;color:var(--ink);max-width:36em;margin:0 0 28px}
-.lede-row{display:grid;grid-template-columns:minmax(0,1fr) 200px;gap:48px;align-items:start;max-width:var(--block)}
-.lede-row>div:first-child{container-type:inline-size;min-width:0}
-.portrait{margin:8px 0 0}
-.portrait img{width:100%;aspect-ratio:2400/2863;object-fit:cover;border:1px solid var(--rule)}
-.portrait figcaption{font-size:13px;color:var(--ink-2);margin-top:8px}
 h2{font-size:clamp(24px,2.4vw,32px);line-height:1.1;margin:0 0 28px}
 h3{font-size:17px;margin:32px 0 12px}
 .meta{display:flex;flex-wrap:wrap;gap:6px 24px;font-size:15px;color:var(--ink-2);margin:0 0 24px}
 .meta a{color:var(--ink)}
-.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 56px;max-width:calc(var(--measure)*1.45);margin-top:40px}
-@media (max-width:640px){.two{grid-template-columns:1fr}}
-.two h3{margin-top:0}
 
 .btn{display:inline-flex;align-items:center;gap:8px;font-size:16px;font-weight:600;text-decoration:none;padding:0 0 4px;box-shadow:0 1px 0 var(--ink);transition:box-shadow .15s var(--ease)}
 .btn:hover{box-shadow:0 2px 0 var(--ink)}
@@ -82,10 +73,6 @@ dl.pubs .doi{display:inline-block;margin-left:2px;font-size:15px;color:var(--ink
 .refs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,320px));gap:24px 48px;max-width:var(--block)}
 .refs .name{font-weight:600}
 .refs .role{color:var(--ink-2);font-size:15px}
-.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,220px));gap:16px 40px;font-size:16px;max-width:var(--block)}
-.contact a{text-decoration:none;border-bottom:1px solid var(--rule);padding-bottom:2px;display:inline-flex;gap:8px;align-items:center}
-.contact a:hover{border-bottom-color:var(--ink)}
-.contact .k{display:block;font-size:13px;color:var(--ink-2);margin-bottom:4px}
 
 /* hero landing */
 .is-hero{min-height:100vh;min-height:100dvh}
@@ -118,8 +105,6 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13px;color
   .page{padding:0 16px}
   .top{height:auto;padding:16px 0 12px;flex-wrap:wrap}
   .nav{gap:20px}
-  .lede-row{grid-template-columns:1fr;gap:20px}
-  .portrait{width:132px;order:-1}
   section{padding:40px 0 24px}
   dl.entries{grid-template-columns:1fr}
   dl.entries dt{padding:14px 0 0;border-bottom:0;font-size:14px}
