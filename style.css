@@ -7,7 +7,8 @@
   --ground:#EDE4D3;      /* dry tundra soil, very pale brown */
   --ink:#1F1915;         /* tephra black */
   --ink-2:#5E4F40;       /* secondary, tinted from the ground hue */
-  --rule:#C6B69C;
+  --rule:#BCAA8C;        /* section rules */
+  --rule-2:#DCD2C0;      /* row rules, lighter and thinner */
   --humus:#5C4330;       /* selection, scrollbar */
   --ochre:#A0703C;       /* resting link underline */
   --measure:66ch;
@@ -57,9 +58,10 @@ h3{font-size:17px;margin:32px 0 12px}
 .actions{display:flex;flex-wrap:wrap;gap:8px 32px;margin:0 0 40px}
 
 dl.entries{margin:0;display:grid;grid-template-columns:120px minmax(0,1fr);max-width:var(--block)}
-dl.entries .row:first-child dt,dl.entries .row:first-child dd{border-top:1px solid var(--rule)}
+dl.entries .row:first-child dt,dl.entries .row:first-child dd{border-top:.5px solid var(--rule-2)}
 dl.entries .row{display:contents}
-dl.entries dt,dl.entries dd{margin:0;padding:14px 0 16px;border-bottom:1px solid var(--rule)}
+dl.entries dt,dl.entries dd{margin:0;padding:14px 0 16px;border-bottom:.5px solid var(--rule-2)}
+dl.entries .row:last-child dt,dl.entries .row:last-child dd{border-bottom:0}
 dl.entries dt{font-variant-numeric:tabular-nums;color:var(--ink-2);font-size:15px;padding-top:16px}
 dl.entries .org{font-weight:600}
 dl.entries ul{margin-top:4px}
