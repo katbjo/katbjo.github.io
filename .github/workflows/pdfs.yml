@@ -1,0 +1,23 @@
+name: Regenerate PDFs
+# Rebuilds cv.pdf and publications.pdf whenever the HTML or CSS changes,
+# so the "Download as PDF" links never go stale. Commits the result back.
+on:
+  push:
+    branches: [main, master]
+    paths: ["cv.html", "publications.html", "style.css", "assets/**", "scripts/make-pdfs.sh"]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  pdfs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Print PDFs with the runner's Google Chrome
+        run: BROWSER=google-chrome sh scripts/make-pdfs.sh
+      - name: Commit PDFs if they changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add cv.pdf publications.pdf
+          if git diff --cached --quiet; then echo "PDFs unchanged"; else git commit -m "Regenerate PDFs [skip ci]" && git push; fi
