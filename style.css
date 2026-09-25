@@ -116,6 +116,17 @@ dl.pubs .doi{display:inline-block;margin-left:2px;font-size:15px;color:var(--ink
   .portrait.round{width:128px;justify-self:start;order:-1}
   .hero .bg{opacity:calc(var(--bg-opacity) * .9)}
 }
+/* field photos: a narrow feed you scroll through like a phone gallery */
+.field{padding:88px 16px 120px;border-top:0;display:flex;flex-direction:column;align-items:center}
+.field h2{width:min(520px,100%);font-size:15px;font-weight:600;letter-spacing:.01em;color:var(--ink-2);margin:0 0 20px}
+.feed{display:flex;flex-direction:column;gap:20px;width:min(520px,100%)}
+.feed figure{margin:0}
+.feed img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:3px}
+.scroll-cue{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);z-index:1;display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink-2);text-decoration:none;white-space:nowrap}
+.scroll-cue:hover{color:var(--ink)}
+.scroll-cue .ic{width:13px;height:13px}
+@media (max-width:900px){.scroll-cue{bottom:12px}}
+@media print{.field,.scroll-cue{display:none}}
 footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13px;color:var(--ink-2);display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
 
 @media (max-width:900px){
