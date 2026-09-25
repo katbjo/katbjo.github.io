@@ -29,14 +29,14 @@
     </div>
     <figure class="portrait round"><img src="assets/images/Kata_3.jpg" alt="Katrín Björnsdóttir outdoors in a scarf and field jacket" width="2400" height="2863" fetchpriority="high"></figure>
   </div>
-  <a class="scroll-cue" href="#field">Photos from the field <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v11M4 9.5l4 4 4-4"/></svg></a>
+  <a class="scroll-cue" href="#field">Photos <svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2.5v11M4 9.5l4 4 4-4"/></svg></a>
 </section>
 </main>
 
 </div>
-<section class="field" id="field" aria-labelledby="field-h">
-  <h2 id="field-h">From the field</h2>
-  <div class="feed">
+<section class="field" id="field" aria-label="Field photos">
+  <div class="gallery">
+  <div class="feed" tabindex="0">
     <figure><img src="assets/images/field/field-01-1200.jpg" alt="Two white poppies on a gravel shore, a snow-streaked mountain across the water" width="1200" height="800" loading="lazy" decoding="async"></figure>
     <figure><img src="assets/images/field/field-02-1200.jpg" alt="A dense pink flowering cushion among grey rocks" width="1200" height="800" loading="lazy" decoding="async"></figure>
     <figure><img src="assets/images/field/field-03-1200.jpg" alt="White flowers with yellow centres against a deep blue sky" width="1200" height="800" loading="lazy" decoding="async"></figure>
@@ -47,6 +47,17 @@
     <figure><img src="assets/images/field/field-08-1200.jpg" alt="A cluster of small yellow flowers" width="1200" height="800" loading="lazy" decoding="async"></figure>
     <figure><img src="assets/images/field/field-09-1200.jpg" alt="A pink flowering cushion on a sandy slope above a wide glacier valley" width="1200" height="800" loading="lazy" decoding="async"></figure>
   </div>
+  <button class="feed-btn" type="button" data-dir="-1" aria-label="Previous photo"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 8h-11M6.5 4l-4 4 4 4"/></svg></button><button class="feed-btn" type="button" data-dir="1" aria-label="Next photo"><svg class="ic" viewBox="0 0 16 16" aria-hidden="true"><path d="M2.5 8h11M9.5 4l4 4-4 4"/></svg></button>
+  </div>
 </section>
+<script>
+// arrow buttons for mouse users; touch and trackpads swipe the row directly
+document.querySelectorAll(".feed-btn").forEach(function(b){
+  b.addEventListener("click",function(){
+    var f=document.querySelector(".feed"),step=f.clientWidth+16;
+    f.scrollBy({left:step*b.dataset.dir,behavior:matchMedia("(prefers-reduced-motion:reduce)").matches?"auto":"smooth"});
+  });
+});
+</script>
 </body>
 </html>
