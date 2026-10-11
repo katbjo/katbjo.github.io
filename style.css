@@ -154,6 +154,7 @@ footer{border-top:1px solid var(--rule);padding:24px 0 40px;font-size:13px;color
   .page{padding:0}
   section{padding:18pt 0 6pt;break-inside:auto}
   h1{font-size:26pt}h2{font-size:15pt;margin-bottom:10pt}
+  h2,h3{break-after:avoid}
   dl.entries{max-width:none;grid-template-columns:78pt 1fr}
   dl.entries dt,dl.entries dd{padding:6pt 0 7pt;break-inside:avoid}
   a{text-decoration:none;color:inherit}
